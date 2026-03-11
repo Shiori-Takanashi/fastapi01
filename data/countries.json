@@ -1,0 +1,62 @@
+[
+    {
+      "slug_id": "japan",
+      "name_en": "Japan",
+      "continent": "Asia",
+      "capital": "Tokyo"
+    },
+    {
+      "slug_id": "south-korea",
+      "name_en": "South Korea",
+      "continent": "Asia",
+      "capital": "Seoul"
+    },
+    {
+      "slug_id": "china",
+      "name_en": "China",
+      "continent": "Asia",
+      "capital": "Beijing"
+    },
+    {
+      "slug_id": "france",
+      "name_en": "France",
+      "continent": "Europe",
+      "capital": "Paris"
+    },
+    {
+      "slug_id": "germany",
+      "name_en": "Germany",
+      "continent": "Europe",
+      "capital": "Berlin"
+    },
+    {
+      "slug_id": "united-kingdom",
+      "name_en": "United Kingdom",
+      "continent": "Europe",
+      "capital": "London"
+    },
+    {
+      "slug_id": "united-states",
+      "name_en": "United States",
+      "continent": "North America",
+      "capital": "Washington, D.C."
+    },
+    {
+      "slug_id": "canada",
+      "name_en": "Canada",
+      "continent": "North America",
+      "capital": "Ottawa"
+    },
+    {
+      "slug_id": "brazil",
+      "name_en": "Brazil",
+      "continent": "South America",
+      "capital": "Brasília"
+    },
+    {
+      "slug_id": "australia",
+      "name_en": "Australia",
+      "continent": "Oceania",
+      "capital": "Canberra"
+    }
+  ]
