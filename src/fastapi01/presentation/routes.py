@@ -1,4 +1,4 @@
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, HTTPException, Path
 
 from fastapi01.application.service import CountryService
 
@@ -14,7 +14,7 @@ def list_countries():
 
 
 @router.get("/{id}")
-def get_country(id: int):
+def get_country(id: int = Path(ge=1)):
     country = service.get_country(id)
 
     if not country:
