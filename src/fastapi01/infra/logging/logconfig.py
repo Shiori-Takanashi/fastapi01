@@ -1,5 +1,5 @@
 import logging
-from logging import Logger
+from logging import FileHandler, Logger, StreamHandler
 
 from .formatters import build_stream_formatter, build_file_formatter
 from .handlers import build_stream_handler, build_file_handler
@@ -20,21 +20,23 @@ def build_app_logger(app_logger: Logger | None = None) -> Logger:
     app_logger.propagate = False
 
     # LoggerのLevel
-    app_logger.setLevel(1)
+    app_logger.setLevel(logging.DEBUG)
 
     # Streamハンドラーに関する処理
     sh = find_stream_handler(app_logger)
     if sh is None:
-        sh = add_stream_handler(app_logger)
+        sh = add_stream_handler()
+        app_logger.addHandler(sh)
 
     fh = find_file_handler(app_logger)
     if fh is None:
-        fh = add_file_handler(app_logger)
+        fh = add_file_handler()
+        app_logger.addHandler(fh)
 
     return app_logger
 
 
-def add_stream_handler(app_logger: Logger) -> None:
+def add_stream_handler() -> StreamHandler:
     sh = build_stream_handler()
 
     # Formatterに関する処理
@@ -45,10 +47,10 @@ def add_stream_handler(app_logger: Logger) -> None:
     level = build_stream_level()
     sh.setLevel(level)
 
-    app_logger.addHandler(sh)
+    return sh
 
 
-def add_file_handler(app_logger: Logger) -> None:
+def add_file_handler() -> FileHandler:
     fh = build_file_handler(build_filepath())
 
     # Formatterに関する処理
@@ -59,4 +61,14 @@ def add_file_handler(app_logger: Logger) -> None:
     level = build_file_level()
     fh.setLevel(level)
 
-    app_logger.addHandler(fh)
+    return fh
+
+
+def main() -> None:
+    logger = logging.getLogger("debug-logger")
+    logger = build_app_logger(logger)
+    logger.info("HEY")
+
+
+if __name__ == "__main__":
+    main()
