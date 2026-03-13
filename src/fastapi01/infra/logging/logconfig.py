@@ -1,10 +1,11 @@
 import logging
+
 from logging import FileHandler, Logger, StreamHandler
 
 from .formatters import build_stream_formatter, build_file_formatter
 from .handlers import build_stream_handler, build_file_handler
 from .levels import build_stream_level, build_file_level
-from .logpath import build_filepath
+from .logsys import build_filepath
 
 from .handlers import find_stream_handler, find_file_handler
 
