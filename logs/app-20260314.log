@@ -1,0 +1,10 @@
+2026-03-14 01:53:04,484 [DEBUG   ] fastapi01.presentation.routes  :  26 get_country called id=1
+2026-03-14 01:53:04,486 [INFO    ] fastapi01.presentation.routes  :  34 country returned id=1
+2026-03-14 01:54:40,818 [DEBUG   ] fastapi01.presentation.routes  :  26 get_country called id=1
+2026-03-14 01:54:40,818 [INFO    ] fastapi01.presentation.routes  :  34 country returned id=1
+2026-03-14 01:57:19,448 [DEBUG   ] fastapi01.presentation.routes  :  26 get_country called id=1
+2026-03-14 01:57:19,449 [INFO    ] fastapi01.presentation.routes  :  34 country returned id=1
+2026-03-14 02:01:03,266 [DEBUG   ] fastapi01.presentation.routes  :  26 get_country called id=1
+2026-03-14 02:01:03,266 [INFO    ] fastapi01.presentation.routes  :  34 country returned id=1
+2026-03-14 02:01:10,934 [DEBUG   ] fastapi01.presentation.routes  :  26 国を呼び出します。id=1
+2026-03-14 02:01:10,934 [INFO    ] fastapi01.presentation.routes  :  34 国を返却します。id=1
