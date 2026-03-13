@@ -8,32 +8,28 @@ from .logsys import build_filepath
 
 from .handlers import find_stream_handler, find_file_handler
 
-APP_LOGGER_NAME: str = "fast01"
 
-
-def build_app_logger(app_logger: Logger | None = None) -> Logger:
-    # アプリ専用Loggerの作成
-    if app_logger is None:
-        app_logger = logging.getLogger(APP_LOGGER_NAME)
+def configure_logging(logger_name: str = "DEFAULT_NAME") -> Logger:
+    logger = logging.getLogger(logger_name)
 
     # Loggerの伝播
-    app_logger.propagate = False
+    logger.propagate = False
 
     # LoggerのLevel
-    app_logger.setLevel(logging.DEBUG)
+    logger.setLevel(logging.DEBUG)
 
     # Streamハンドラーに関する処理
-    sh = find_stream_handler(app_logger)
+    sh = find_stream_handler(logger)
     if sh is None:
         sh = get_stream_handler()
-        app_logger.addHandler(sh)
+        logger.addHandler(sh)
 
-    fh = find_file_handler(app_logger)
+    fh = find_file_handler(logger)
     if fh is None:
         fh = get_file_handler()
-        app_logger.addHandler(fh)
+        logger.addHandler(fh)
 
-    return app_logger
+    return logger
 
 
 def get_stream_handler() -> StreamHandler:
@@ -65,7 +61,8 @@ def get_file_handler() -> FileHandler:
 
 
 def main() -> None:
-    logger = build_app_logger()
+    logger = logging.getLogger(__name__)
+    configure_logging(__name__)
     logger.info("informationです。")
     logger.debug("debugです。")
 
