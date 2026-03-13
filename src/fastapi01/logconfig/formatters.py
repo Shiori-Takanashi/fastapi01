@@ -1,7 +1,7 @@
 from logging import Formatter
 
-FILE_FMT = "%(levelname)s %(name)s %(message)s"
-STREAM_FMT = "%(asctime)s %(levelname)s %(name)s %(message)s"
+STREAM_FMT = "%(asctime)s [%(levelname)-8s] %(name)-30s %(message)s"
+FILE_FMT = "%(asctime)s [%(levelname)-8s] %(name)-30s :%(lineno)4d %(message)s"
 
 
 def build_stream_formatter(stream_format: str = STREAM_FMT) -> Formatter:
