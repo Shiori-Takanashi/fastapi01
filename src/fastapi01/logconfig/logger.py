@@ -62,3 +62,13 @@ def get_file_handler() -> FileHandler:
     fh.setLevel(level)
 
     return fh
+
+
+def main() -> None:
+    logger = build_app_logger()
+    logger.info("informationです。")
+    logger.debug("debugです。")
+
+
+if __name__ == "__main__":
+    main()
