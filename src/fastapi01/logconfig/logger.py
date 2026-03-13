@@ -20,7 +20,7 @@ def build_app_logger(app_logger: Logger | None = None) -> Logger:
     app_logger.propagate = False
 
     # LoggerのLevel
-    app_logger.setLevel(1)
+    app_logger.setLevel(logging.DEBUG)
 
     # Streamハンドラーに関する処理
     sh = find_stream_handler(app_logger)
