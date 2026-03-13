@@ -1,0 +1,62 @@
+[
+    {
+      "id": 1,
+      "name_en": "Japan",
+      "continent": "Asia",
+      "capital": "Tokyo"
+    },
+    {
+      "id": 2,
+      "name_en": "South Korea",
+      "continent": "Asia",
+      "capital": "Seoul"
+    },
+    {
+      "id": 3,
+      "name_en": "China",
+      "continent": "Asia",
+      "capital": "Beijing"
+    },
+    {
+      "id": 4,
+      "name_en": "France",
+      "continent": "Europe",
+      "capital": "Paris"
+    },
+    {
+      "id": 5,
+      "name_en": "Germany",
+      "continent": "Europe",
+      "capital": "Berlin"
+    },
+    {
+      "id": 6,
+      "name_en": "United Kingdom",
+      "continent": "Europe",
+      "capital": "London"
+    },
+    {
+      "id": 7,
+      "name_en": "United States",
+      "continent": "North America",
+      "capital": "Washington, D.C."
+    },
+    {
+      "id": 8,
+      "name_en": "Canada",
+      "continent": "North America",
+      "capital": "Ottawa"
+    },
+    {
+      "id": 9,
+      "name_en": "Brazil",
+      "continent": "South America",
+      "capital": "Brasília"
+    },
+    {
+      "id": 10,
+      "name_en": "Australia",
+      "continent": "Oceania",
+      "capital": "Canberra"
+    }
+  ]
