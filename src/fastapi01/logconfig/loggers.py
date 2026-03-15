@@ -1,5 +1,5 @@
 import logging
-from logging import FileHandler, Logger, StreamHandler
+from logging import FileHandler, StreamHandler
 
 from .formatters import build_stream_formatter, build_file_formatter
 from .handlers import build_stream_handler, build_file_handler
@@ -9,7 +9,7 @@ from .logsys import build_filepath
 from .handlers import find_stream_handler, find_file_handler
 
 
-def configure_logging(logger_name: str = "DEFAULT_NAME") -> Logger:
+def configure_logging(logger_name: str = "DEFAULT_NAME") -> None:
     logger = logging.getLogger(logger_name)
 
     # Loggerの伝播
@@ -28,8 +28,6 @@ def configure_logging(logger_name: str = "DEFAULT_NAME") -> Logger:
     if fh is None:
         fh = get_file_handler()
         logger.addHandler(fh)
-
-    return logger
 
 
 def get_stream_handler() -> StreamHandler:
