@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 
 from fastapi01.presentation.routes import router
-from fastapi01.logconfig.loggers import configure_logging
+from fastapi01.logconfig.logger import configure_logging
 
 configure_logging()
 
