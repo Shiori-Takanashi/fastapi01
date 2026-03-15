@@ -1,18 +1,17 @@
 import json
 from pathlib import Path
 
-from fastapi01.domain.models import Country
-
+from fastapi01.domain.models import CountryResponse
 
 DATA_PATH = Path("data/countries.json")
 
 
 class CountryRepository:
-    def load_all(self) -> list[Country]:
+    def load_all(self) -> list[CountryResponse]:
         data = json.loads(DATA_PATH.read_text())
-        return [Country(**c) for c in data]
+        return [CountryResponse(**c) for c in data]
 
-    def find_by_id(self, id: int) -> Country | None:
+    def find_by_id(self, id: int) -> CountryResponse | None:
         countries = self.load_all()
 
         for c in countries:
