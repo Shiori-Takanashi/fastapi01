@@ -1,7 +1,7 @@
 from pydantic import BaseModel
 
 
-class Country(BaseModel):
+class CountryResponse(BaseModel):
     id: int
     name_en: str
     continent: str
