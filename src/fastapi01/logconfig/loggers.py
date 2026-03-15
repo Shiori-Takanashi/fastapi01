@@ -9,8 +9,8 @@ from .logsys import build_filepath
 from .handlers import find_stream_handler, find_file_handler
 
 
-def configure_logging(logger_name: str = "DEFAULT_NAME") -> None:
-    logger = logging.getLogger(logger_name)
+def configure_logging() -> None:
+    logger = logging.getLogger("fastapi01")
 
     # Loggerの伝播
     logger.propagate = False
@@ -56,14 +56,3 @@ def get_file_handler() -> FileHandler:
     fh.setLevel(level)
 
     return fh
-
-
-def main() -> None:
-    logger = logging.getLogger(__name__)
-    configure_logging(__name__)
-    logger.info("informationです。")
-    logger.debug("debugです。")
-
-
-if __name__ == "__main__":
-    main()
